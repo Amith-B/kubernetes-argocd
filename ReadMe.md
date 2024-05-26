@@ -4,7 +4,7 @@
 1. `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml`
 1. Get the list of services running on argocd namespace:<br/>`kubectl get svc -n argocd`
 1. Expose argocd port 443 to local 8080:<br/>`kubectl port-forward -n argocd svc/argocd-server 8080:443`
-1. Get the argocd password which is stored in `argocd` namespace with key named `argocd-initial-admin-secret`:<br/>`kubernetes-argocd % kubectl get secrets argocd-initial-admin-secret -n argocd -o yaml`
+1. Get the argocd password which is stored in `argocd` namespace with key named `argocd-initial-admin-secret`:<br/>`kubectl get secrets argocd-initial-admin-secret -n argocd -o yaml`
    <br/>
    <br/>
    Output of this will be like this:
