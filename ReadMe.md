@@ -24,3 +24,6 @@ Output of this will be like this:
 `echo sdvsdDVSDVSdvDSFVSAascvads== | base64 --decode`
 1. Add application.yaml with kind `aplication` and fill the metadata, or you can create an application in argocd UI and run a cluster
 1. If application.yaml is created manually then apply the changes with:<br/>`kubectl apply -f application.yaml`
+1. After the application is up you can verify the app by exposing the service through minikube:
+    1. Get the services that are running on this new namespace: <br/>`kubectl get services -n my-express-app`
+    1. Expose the port: <br/>`minikube service my-expressapp-service -n my-express-app`

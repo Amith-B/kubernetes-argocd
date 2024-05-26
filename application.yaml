@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: my-express-app
+    namespace: my-express-app # the application service will be running in this namespace, later you can expose this service
   syncPolicy:
     automated:
       prune: true
