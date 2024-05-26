@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-expressapp-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-expressapp
+  template:
+    metadata:
+      labels:
+        app: my-expressapp
+    spec:
+      containers:
+        - name: my-expressapp
+          image: amithbrs/my_node_app:v1.0.0
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              memory: 600Mi
+              cpu: 1
+            requests:
+              memory: 300Mi
+              cpu: 500m
