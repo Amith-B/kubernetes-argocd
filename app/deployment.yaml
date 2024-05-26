@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-expressapp
-          image: amithbrs/my_node_app:v1.0.0
+          image: amithbrs/my_node_app:v2.0.0
           ports:
             - containerPort: 3000
           resources:
