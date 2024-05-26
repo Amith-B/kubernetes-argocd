@@ -29,3 +29,4 @@ type: Opaque`
    1. Expose the port:
       - Through minikube:<br/>`minikube service my-expressapp-service -n my-express-app`
       - Through kubectl port-forward:<br/>`kubectl port-forward -n my-express-app svc/my-expressapp-service 3001:3001`
+        <br/><b>Note:</b> if exposed with kubectl port-forward, loadbalancing is not happening, not sure about the reason yet
