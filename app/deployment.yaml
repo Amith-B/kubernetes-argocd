@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-expressapp-deployment
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: my-expressapp
@@ -20,7 +20,7 @@ spec:
           resources:
             limits:
               memory: 600Mi
-              cpu: 1
+              cpu: 500m
             requests:
               memory: 300Mi
               cpu: 500m
